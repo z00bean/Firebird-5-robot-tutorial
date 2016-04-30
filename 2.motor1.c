@@ -1,3 +1,9 @@
+/**
+ * Team: Tezpur University (NMK, PK, DS, ZB).
+ * 
+ * This program has several functions defined for movement.
+ * PORT A bits: X X X X RB RF LF LB
+ * */
 #define F_CPU 14745600
 
 #include<avr/io.h>
@@ -25,8 +31,16 @@ void rotateleft(){
 	PORTA = 0b00000101;
 }
 
+void rotateleftSoft(){
+	PORTA = 0b00000100;
+}
+
 void rotateright(){
 	PORTA = 0b00001010;
+}
+
+void rotaterightSoft(){
+	PORTA = 0b00000010;
 }
 
 void backward(){
